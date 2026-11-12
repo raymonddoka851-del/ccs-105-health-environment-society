@@ -78,6 +78,18 @@ body {
   transition: width .08s linear;
 }
 
+.note-figure {
+  display: block;
+  max-width: min(100%, 760px);
+  max-height: 520px;
+  height: auto;
+  margin: 18px auto;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fff;
+}
+
 /* ---------- layout ---------- */
 
 .layout {

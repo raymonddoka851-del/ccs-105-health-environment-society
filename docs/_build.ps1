@@ -107,9 +107,13 @@ function MapRef([string]$href) {
 
     $p = $path -replace '\\', '/'
     while ($p.StartsWith('./')) { $p = $p.Substring(2) }
+    if ($p.StartsWith('../assets/')) { $p = $p.Substring(3) }
     $p = [uri]::UnescapeDataString($p)
 
     $out = $null
+    if ($p.StartsWith('assets/') -and (Test-Path -LiteralPath (Join-Path $PackRoot $p) -PathType Leaf)) {
+        return (Get-RelHref $p) + $hash
+    }
     if ($script:DocMap.ContainsKey($p.ToLowerInvariant())) {
         $out = $script:DocMap[$p.ToLowerInvariant()]
     } else {
@@ -166,9 +170,17 @@ function Inline([string]$text) {
     [void]$sb.Append($esc.Substring($pos))
     $t = $sb.ToString()
 
-    # 2. bold, then italic, then links
+    # 2. bold, italic, images, and links
     $t = [regex]::Replace($t, '\*\*([^*]+?)\*\*', '<strong>$1</strong>')
     $t = [regex]::Replace($t, '(?<![\w*])\*(?!\s)([^*\n]{1,160}?)(?<!\s)\*(?![\w*])', '<em>$1</em>')
+    $t = [regex]::Replace($t, '!\[([^\]]*)\]\(([^)\s]+)\)', {
+        param($m)
+        $alt = $m.Groups[1].Value
+        $raw = [System.Net.WebUtility]::HtmlDecode($m.Groups[2].Value)
+        $src = MapRef $raw
+        '<img class="note-figure" src="' + (HtmlEscape $src) + '" alt="' + $alt +
+            '" loading="lazy" decoding="async">'
+    })
     $t = [regex]::Replace($t, '\[([^\]]+)\]\(([^)\s]+)\)', {
         param($m)
         $label = $m.Groups[1].Value
@@ -1623,6 +1635,14 @@ $assetsDir0 = Join-Path $OutRoot 'assets'
 if (-not (Test-Path $assetsDir0)) { New-Item -ItemType Directory -Force -Path $assetsDir0 | Out-Null }
 [System.IO.File]::WriteAllText((Join-Path $assetsDir0 'theme.css'), $themeCss,
     (New-Object System.Text.UTF8Encoding($false)))
+$figureSource = Join-Path $PackRoot 'assets\figures'
+if (Test-Path -LiteralPath $figureSource -PathType Container) {
+    $figureOutput = Join-Path $assetsDir0 'figures'
+    if (-not (Test-Path -LiteralPath $figureOutput -PathType Container)) {
+        New-Item -ItemType Directory -Force -Path $figureOutput | Out-Null
+    }
+    Copy-Item -Path (Join-Path $figureSource '*') -Destination $figureOutput -Force
+}
 
 # Link map: source Markdown path -> generated page.
 foreach ($d in $script:Docs) {
