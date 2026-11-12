@@ -4,8 +4,8 @@
 
 This repository contains source-based study notes, an IBM-style progress
 tracker, saved topic checklists, active-recall activities, and full-text search.
-The notes are organized around the available University of Embu course
-materials; topics with unavailable lecture text are identified in the site.
+This is an independent study resource assembled from course materials. It is
+not an official publication or an endorsement by an institution.
 
 ## Build locally
 
