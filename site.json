@@ -1,0 +1,117 @@
+{
+    "course":  "CCS 105",
+    "brandMark":  "H",
+    "brandName":  "CCS 105",
+    "brandSub":  "Revision Notes",
+    "suffix":  "CCS 105 Revision",
+    "metadesc":  "Study notes for CCS 105 Health, Environment, and Society, with source gaps clearly marked.",
+    "kicker":  "CCS 105 · University of Embu",
+    "heroTitle":  "Health, Environment, and Society",
+    "heroLede":  "Course notes, interactive progress tracking, topic search and practice — built for learning from the foundations.",
+    "footer":  "CCS 105 — Health, Environment, and Society. Source-based study notes.",
+    "repoUrl":  "https://github.com/raymonddoka851-del/ccs-105-health-environment-society/blob/main/",
+    "accent":  "#059669",
+    "accent2":  "#ea580c",
+    "accentDark":  "#6ee7b7",
+    "accent2Dark":  "#fdba74",
+    "store":  "ccs105",
+    "quizHub":  "All quizzes",
+    "docset":  [
+                   {
+                       "md":  "START_HERE.md",
+                       "group":  "Start here",
+                       "label":  "Start here",
+                       "out":  "START_HERE.html"
+                   },
+                   {
+                       "md":  "YOUR_STUDY_PLAN.md",
+                       "group":  "Start here",
+                       "label":  "Your study plan",
+                       "out":  "YOUR_STUDY_PLAN.html"
+                   },
+                   {
+                       "md":  "CHEAT_SHEET.md",
+                       "group":  "Start here",
+                       "label":  "Cheat sheet",
+                       "out":  "CHEAT_SHEET.html"
+                   },
+                   {
+                       "md":  "PROGRESS_TRACKER.md",
+                       "group":  "Start here",
+                       "label":  "Progress tracker",
+                       "out":  "PROGRESS_TRACKER.html"
+                   },
+                   {
+                       "md":  "notes/01_holistic-wellness.md",
+                       "group":  "Notes",
+                       "label":  "01 · Holistic Wellness",
+                       "out":  "notes/01_holistic-wellness.html"
+                   },
+                   {
+                       "md":  "notes/02_communicable-diseases.md",
+                       "group":  "Notes",
+                       "label":  "02 · Communicable Diseases",
+                       "out":  "notes/02_communicable-diseases.html"
+                   },
+                   {
+                       "md":  "notes/03_noncommunicable-diseases.md",
+                       "group":  "Notes",
+                       "label":  "03 · Noncommunicable Diseases",
+                       "out":  "notes/03_noncommunicable-diseases.html"
+                   },
+                   {
+                       "md":  "notes/04_mental-health.md",
+                       "group":  "Notes",
+                       "label":  "04 · Mental Health",
+                       "out":  "notes/04_mental-health.html"
+                   },
+                   {
+                       "md":  "notes/05_drugs-and-substance-abuse-in-kenya.md",
+                       "group":  "Notes",
+                       "label":  "05 · Drugs and Substance Abuse in Kenya",
+                       "out":  "notes/05_drugs-and-substance-abuse-in-kenya.html"
+                   },
+                   {
+                       "md":  "notes/06_hygiene-and-sanitation.md",
+                       "group":  "Notes",
+                       "label":  "06 · Hygiene and Sanitation",
+                       "out":  "notes/06_hygiene-and-sanitation.html"
+                   },
+                   {
+                       "md":  "notes/07_climate-change.md",
+                       "group":  "Notes",
+                       "label":  "07 · Climate Change",
+                       "out":  "notes/07_climate-change.html"
+                   },
+                   {
+                       "md":  "notes/08_digital-environment.md",
+                       "group":  "Notes",
+                       "label":  "08 · Digital Environment",
+                       "out":  "notes/08_digital-environment.html"
+                   },
+                   {
+                       "md":  "notes/09_national-values-and-kenyan-political-environment.md",
+                       "group":  "Notes",
+                       "label":  "09 · National Values and Kenyan Political Environment",
+                       "out":  "notes/09_national-values-and-kenyan-political-environment.html"
+                   },
+                   {
+                       "md":  "notes/10_unemployment-and-poverty-mitigation-in-kenya.md",
+                       "group":  "Notes",
+                       "label":  "10 · Unemployment and Poverty Mitigation in Kenya",
+                       "out":  "notes/10_unemployment-and-poverty-mitigation-in-kenya.html"
+                   },
+                   {
+                       "md":  "practice/QUESTION_BANK.md",
+                       "group":  "Practice",
+                       "label":  "Question bank",
+                       "out":  "practice/QUESTION_BANK.html"
+                   },
+                   {
+                       "md":  "practice/ANSWER_KEY.md",
+                       "group":  "Practice",
+                       "label":  "Answer key",
+                       "out":  "practice/ANSWER_KEY.html"
+                   }
+               ]
+}

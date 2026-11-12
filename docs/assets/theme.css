@@ -1,0 +1,8 @@
+:root {
+  --accent: #059669;
+  --accent-2: #ea580c;
+}
+[data-theme="dark"] {
+  --accent: #6ee7b7;
+  --accent-2: #fdba74;
+}
